@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  mqtt_broker:
+    container_name: mqtt
+    restart: always
+    image: eclipse-mosquitto
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ./configs/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mqtt_data:/mosquitto/data
+      - mqtt_log:/mosquitto/log
+
+  noise:
+    image: noisegen:1.0
+    build:
+      context: .
+      dockerfile: dockerfile
+    environment:
+      - MQTT_HOST=mqtt
+  
+volumes:
+  mqtt_data:
+  mqtt_log:
