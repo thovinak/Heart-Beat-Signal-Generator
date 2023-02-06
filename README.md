@@ -23,6 +23,7 @@ graph TD
 A[Connect to MQTT Broker] --> B[Start For Loop]
 B --> C[Generate Noisy Signal]
 C --> D{Signal Generator}
+D --> B[Generate plot]
 B --> |Press ctrl + c| J[Stop MQTT Connection]
 J --> K[Exit Program]
 ```
@@ -31,7 +32,7 @@ J --> K[Exit Program]
 
 - [ ] Save PNG
 - [ ] GEN JSON
-- [ ] 
+- [ ] Publish JSON
 
 ### TODO
 
