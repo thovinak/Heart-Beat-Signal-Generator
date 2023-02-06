@@ -13,7 +13,7 @@ This is a single page application utilizing a python script that generates a cyc
 
 ## Requirements
 
-see[requirements.txt]() for the packages required to get this system up and running.
+see[requirements.txt](requirements.txt) for the packages required to get this system up and running.
 
 ## Software Execution flow
 
