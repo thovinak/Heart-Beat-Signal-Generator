@@ -1,0 +1,4 @@
+setuptools>=66.1.1
+matplotlib>=3.6.3
+numpy>=1.24.1
+paho-mqtt>=1.6.1
